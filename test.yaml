@@ -1,0 +1,19 @@
+## Test configuration
+
+nick: Test-o-Erone
+username: minchia
+ircname: Suck A Minch
+lib:
+    - poe-component-irc-plugin-rekarma/lib
+
+networks:
+    freenode:
+        server: chat.freenode.net
+        local_plugins:
+            - [Connector, { reconnect: 30 } ]
+            - [AutoJoin, {
+                Channels: [
+                    '##dipreathon',
+                ]
+            }]
+            - [ReKarma]

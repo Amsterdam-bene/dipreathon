@@ -1,0 +1,3 @@
+[submodule "poe-component-irc-plugin-rekarma"]
+	path = poe-component-irc-plugin-rekarma
+	url = git@github.com:bucciarati/poe-component-irc-plugin-rekarma.git
