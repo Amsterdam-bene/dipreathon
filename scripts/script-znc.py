@@ -21,6 +21,7 @@ for line in char_stream:
     viva_match = viva.match(line)
     if viva_match:
         element = viva_match.group("toBeIncreased").replace("'", "\\'")
+        element = element.lower()
         if element in karma:
             karma[element] += 1
         else:
@@ -28,11 +29,12 @@ for line in char_stream:
     else:
         abbasso_match = abbasso.match(line)
         if abbasso_match:
-	    element = abbasso_match.group("toBeDecreased").replace("'", "\\'")
-            if element in karma:
-                karma[element] -= 1
-            else:
-                karma[element] = -1
+        element = abbasso_match.group("toBeDecreased").replace("'", "\\'")
+        element = element.lower()
+        if element in karma:
+            karma[element] -= 1
+        else:
+            karma[element] = -1
 
 db = sqlite3.connect('karma.db')
 
