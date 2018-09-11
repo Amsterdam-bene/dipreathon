@@ -20,6 +20,7 @@ for line in char_stream:
     viva_match = viva.match(line)
     if viva_match:
         element = viva_match.group(2).replace("'", "\\'")
+        element = element.lower()
         if element in karma:
             karma[element] += 1
         else:
@@ -28,6 +29,7 @@ for line in char_stream:
         abbasso_match = abbasso.match(line)
         if abbasso_match:
 	    element = abbasso_match.group(2).replace("'", "\\'")
+        element = element.lower()
             if element in karma:
                 karma[element] -= 1
             else:
@@ -46,6 +48,6 @@ for i,n in karma.iteritems():
         end = ",\n"
     else:
         end = "\n"
-	
+
     print("\t'%s' => '%d'" % (i.encode('utf-8') ,n), end=end)
 print ("};")
