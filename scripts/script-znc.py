@@ -29,7 +29,7 @@ for line in char_stream:
     else:
         abbasso_match = abbasso.match(line)
         if abbasso_match:
-	    element = abbasso_match.group("toBeDecreased").replace("'", "\\'")
+        element = abbasso_match.group("toBeDecreased").replace("'", "\\'")
         element = element.lower()
         if element in karma:
             karma[element] -= 1
