@@ -9,6 +9,7 @@ RUN cpanm --notest POE::Component::IRC::Plugin::Hailo
 COPY poe-component-irc-plugin-rekarma poe-component-irc-plugin-rekarma 
 COPY config.yaml config.yaml
 
+RUN chown -R nobody: /usr/src/app
 USER nobody
 
 CMD ["pocoirc", "--verbose", "--config", "config.yaml"]
