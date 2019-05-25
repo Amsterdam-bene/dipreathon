@@ -1,8 +1,8 @@
 ## Test configuration
 
-nick: Test-o-Erone
-username: minchia
-ircname: Suck A Minch
+nick: Default_bot
+username: non_sei_il_benvenuto
+ircname: Matteo
 lib:
     - poe-component-irc-plugin-rekarma/lib
 
@@ -17,3 +17,4 @@ networks:
                 ]
             }]
             - [ReKarma]
+            - [Logger, { Path: /usr/src/app/logs }]
