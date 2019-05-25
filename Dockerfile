@@ -2,7 +2,8 @@ FROM perl
 
 WORKDIR /usr/src/app
 
-RUN cpanm App::Pocoirc
+# YOLO
+RUN cpanm --notest App::Pocoirc
 RUN cpanm --notest POE::Component::IRC::Plugin::Hailo
 
 COPY poe-component-irc-plugin-rekarma poe-component-irc-plugin-rekarma 
