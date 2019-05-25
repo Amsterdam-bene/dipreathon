@@ -11,5 +11,4 @@ COPY config.yaml config.yaml
 
 USER nobody
 
-VOLUME ["/usr/src/app/config.yaml"]
 CMD ["pocoirc", "--verbose", "--config", "config.yaml"]
