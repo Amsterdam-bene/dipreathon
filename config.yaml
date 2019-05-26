@@ -5,6 +5,7 @@ username: non_sei_il_benvenuto
 ircname: Matteo
 lib:
     - poe-component-irc-plugin-rekarma/lib
+    - poe-component-irc-plugin-recallback/lib
 
 networks:
     freenode:
@@ -17,4 +18,5 @@ networks:
                 ]
             }]
             - [ReKarma]
+            - [ReCallback]
             - [Logger, { Path: /usr/src/app/logs }]
