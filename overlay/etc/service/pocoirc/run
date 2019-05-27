@@ -1,3 +1,7 @@
 #!/bin/sh
+# put your servizietto here
+# remember: it can't daemonize
+# more details http://smarden.org/runit/runsv.8.html
+
 cd /usr/src/app
 exec pocoirc --verbose --config config.yaml
