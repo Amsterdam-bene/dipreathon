@@ -19,4 +19,4 @@ networks:
             }]
             - [ReKarma]
             - [ReCallback]
-            - [Logger, { Path: /usr/src/app/logs }]
+            - [Logger, { Path: /usr/src/bot/logs }]
