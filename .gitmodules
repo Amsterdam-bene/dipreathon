@@ -1,6 +1,6 @@
 [submodule "poe-component-irc-plugin-rekarma"]
-	path = poe-component-irc-plugin-rekarma
+	path = bot/poe-component-irc-plugin-rekarma
 	url = git@github.com:bucciarati/poe-component-irc-plugin-rekarma.git
 [submodule "poe-component-irc-plugin-recallback"]
-	path = poe-component-irc-plugin-recallback
+	path = bot/poe-component-irc-plugin-recallback
 	url = git@github.com:Amsterdam-bene/poe-component-irc-plugin-recallback.git
