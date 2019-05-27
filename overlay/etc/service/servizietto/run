@@ -1,0 +1,5 @@
+#!/bin/sh
+# put your servizietto here
+# remember: it can't daemonize
+
+# exec echo "Servizietto's placeholder"
