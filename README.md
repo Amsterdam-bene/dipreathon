@@ -12,7 +12,7 @@ docker rm "${ALIAS}" 2>/dev/null
 docker pull "${ALIAS}" 2>/dev/null
 docker run -d --restart unless-stopped \
     -e TZ='Europe/Amsterdam' \
-    -v /tmp/my_config_file.yaml:/usr/src/app/config.yaml \
+    -v /tmp/my_config_file.yaml:/usr/src/bot/config.yaml \
     --name "${ALIAS}" "${IMAGE}"
 ```
 
