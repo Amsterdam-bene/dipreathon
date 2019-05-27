@@ -3,13 +3,14 @@ FROM perl
 RUN apt-get update && apt-get install -y runit parallel && apt-get clean
 
 # YOLO
-ADD bot /usr/src/bot
 WORKDIR /usr/src/bot
 RUN cpanm --notest App::Pocoirc
 RUN cpanm --notest POE::Component::IRC::Plugin::Hailo
 RUN cpanm --notest Net::Twitter::Lite::WithAPIv1_1
 RUN cpanm --notest Hailo
 RUN cpanm --notest Hijk
+
+ADD bot /usr/src/bot
 
 # Add here your servizietto
 # ADD servizietto /usr/src/servizietto
