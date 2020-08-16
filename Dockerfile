@@ -1,13 +1,14 @@
 FROM perl
 
-RUN apt-get update && apt-get install -y runit parallel && apt-get clean
+RUN apt-get update && apt-get install -y runit parallel git && apt-get clean
 
 # YOLO
 WORKDIR /usr/src/bot
 RUN cpanm --notest App::Pocoirc
 RUN cpanm --notest POE::Component::IRC::Plugin::Hailo
 RUN cpanm --notest Net::Twitter::Lite::WithAPIv1_1
-RUN cpanm --notest Hailo
+RUN cpanm --notest Net::OAuth::Client
+RUN cpanm --notest WWW::Tumblr
 RUN cpanm --notest Hijk
 
 ADD bot /usr/src/bot
